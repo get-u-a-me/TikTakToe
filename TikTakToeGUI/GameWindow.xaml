@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="TikTakToeGUI.GameWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TikTakToeGUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="450">
+    <Grid>
+        <Grid Background="#FF1A1A1A">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10"/>
+
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="1" Grid.Row="3" x:Name="field_1" Click="ButtonClicked" FontSize="50" FontWeight="Bold" Background="#FF383838" Foreground="White"/>
+            <Button Grid.Column="3" Grid.Row="3" x:Name="field_2" Click="ButtonClicked" FontSize="50" FontWeight="Bold" Background="#FF383838" Foreground="White"/>
+            <Button Grid.Column="5" Grid.Row="3" x:Name="field_3" Click="ButtonClicked" FontSize="50" FontWeight="Bold" Background="#FF383838" Foreground="White"/>
+            <Button Grid.Column="1" Grid.Row="5" x:Name="field_4" Click="ButtonClicked" FontSize="50" FontWeight="Bold" Background="#FF383838" Foreground="White"/>
+            <Button Grid.Column="3" Grid.Row="5" x:Name="field_5" Click="ButtonClicked" FontSize="50" FontWeight="Bold" Background="#FF383838" Foreground="White"/>
+            <Button Grid.Column="5" Grid.Row="5" x:Name="field_6" Click="ButtonClicked" FontSize="50" FontWeight="Bold" Background="#FF383838" Foreground="White"/>
+            <Button Grid.Column="1" Grid.Row="7" x:Name="field_7" Click="ButtonClicked" FontSize="50" FontWeight="Bold" Background="#FF383838" Foreground="White"/>
+            <Button Grid.Column="3" Grid.Row="7" x:Name="field_8" Click="ButtonClicked" FontSize="50" FontWeight="Bold" Background="#FF383838" Foreground="White"/>
+            <Button Grid.Column="5" Grid.Row="7" x:Name="field_9" Click="ButtonClicked" FontSize="50" FontWeight="Bold" Background="#FF383838" Foreground="White"/>
+
+            <Label x:Name="playerturn" Grid.Row="1" Grid.Column="1" Content="Spieler 1 ist an der Reihe" Grid.ColumnSpan="3" Foreground="White"/>
+            <Label x:Name="errorMessage" Grid.Row="1" Grid.Column="5" Foreground="White"/>
+        </Grid>
+    </Grid>
+</UserControl>
